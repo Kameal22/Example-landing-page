@@ -1,0 +1,296 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+.scdMainLeft{
+    width: 5%;
+    border-right: 2px solid rgba(170, 170, 170, 0.726);
+}
+
+.scdMainRight{
+    width: 5%;
+    border-left: 2px solid rgba(170, 170, 170, 0.726);
+}
+
+.scdMiddleMain{
+    position: relative;
+    margin-top: 20vh;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    text-align: center;
+    height: 65vh;
+}
+
+.scdMainMiddleLeft{
+    width: 50%;
+}
+
+.scdMainMiddleLeft h2{
+    margin-top: 6vh;
+    letter-spacing: 1px;
+}
+
+.scdMainMiddleLeft .scdGreen{
+    color: rgb(19, 204, 90);
+}
+
+.scdMainMiddleLeft .scdUpper{
+    position: relative;
+    bottom: 3px;
+}
+
+.scdBiorezonans{
+    display: flex;
+    width: 48%;
+    margin-left: 5em;
+}
+
+.scdBiorezonans:hover > .scdBio{
+    transform: translateX(-10px);
+}
+
+.scdBiorezonans:hover > .scdMag{
+    transform: translateY(-10px);
+}
+
+@keyframes mainBioIn{
+    from{
+        opacity: 0;
+        transform: translateX(-200px)
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+.scdBiorezonans .scdBio{
+    animation: mainBioIn 2s;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+@keyframes mainMagIn{
+    from{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.scdBiorezonans .scdMag{
+    animation: mainMagIn 2s;
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.scdShortInfo{
+    margin-top: 12vh;
+}
+
+.scdShortInfo h3{
+    text-align: left;
+    margin-left: 20%;
+    padding-bottom: 2vh;
+}
+
+.scdMainMiddleRight{
+    width: 40%;
+    margin-right: 10%;
+}
+
+@keyframes mainPhotoIn{
+    from{
+        opacity: 0;
+        transform: translateX(150px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes mainPhotoOut{
+    from{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    to{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+
+.scdMainPhoto{
+    max-width: 100%;
+    height: auto;
+    -webkit-box-shadow: -4px 5px 10px -3px #000000; 
+    box-shadow: -4px 5px 10px -3px #000000;
+    animation: mainPhotoIn 1.8s;
+}
+
+.scdMainPhotoOut{
+    max-width: 100%;
+    height: auto;
+    -webkit-box-shadow: -4px 5px 10px -3px #000000; 
+    box-shadow: -4px 5px 10px -3px #000000;
+    animation: mainPhotoOut 1.2s;
+}
+
+@keyframes testsIn{
+    from{
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.scdTestyHidden{
+    opacity: 0;
+}
+
+.scdShortInfo .scdTesty{
+    animation: testsIn .8s;
+    width: 50%;
+    transition: transform .5s;
+}
+
+.scdShortInfo .scdTesty:hover{
+    cursor: pointer;
+    transform: translateX(10px);
+}
+
+.scdShortInfo .scdTesty:before{
+    content: "\007C";
+    padding-right: 1vh;
+    color: rgb(19, 204, 90);
+}
+
+@keyframes odczulanieIn{
+    from{
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.scdOdczulanieHidden{
+    opacity: 0;
+}
+
+.scdShortInfo .scdOdczulanie{
+    animation: odczulanieIn .8s;
+    width: 50%;
+    transition: transform .5s;
+}
+
+.scdShortInfo .scdOdczulanie:hover{
+    cursor: pointer;
+    transform: translateX(10px);
+}
+
+.scdShortInfo .scdOdczulanie:before{
+    content: "\007C";
+    padding-right: 1vh;
+    color: rgb(19, 204, 90);
+}
+
+@keyframes terapiaIn{
+    from{
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.scdTerapiaHidden{
+    opacity: 0;
+}
+
+.scdShortInfo .scdTerapia{
+    animation: odczulanieIn .8s;
+    width: 50%;
+    transition: transform .5s;
+}
+
+.scdShortInfo .scdTerapia:hover{
+    cursor: pointer;
+    transform: translateX(10px);
+}
+
+.scdShortInfo .scdTerapia:before{
+    content: "\007C";
+    padding-right: 1vh;
+    color: rgb(19, 204, 90);
+}
+
+.scdIndicator{
+    position: absolute;
+    bottom: 0;
+    left: 47%;
+}
+
+@keyframes landingContentOut{
+    from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to{
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+}
+
+@keyframes landingContentIn{
+    from{
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.scdMainFadeOut{
+    animation: landingContentOut 2s;
+}
+
+.scdNavFadeOut{
+    animation: landingContentOut 2s;
+}
+
+.contentIn{
+    animation: landingContentIn 2s;
+}
